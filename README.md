@@ -10,6 +10,7 @@ Then when done I decided to solve with a reduce instead and looked up how to to 
 
 * Truly understanding reduce by using it in anger
 * The existance of javascript's unary plus
+* How to use the spread operator
 
 Over the past years of AoC I've noticed that many early puzzles are opportunities for junior devs to learn about modulos, today's was not different!
 
