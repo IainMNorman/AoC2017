@@ -4,7 +4,7 @@ Personal repository for my solution for this year.
 
 ## Journal - Day 1
 
-I decided to use node for today and rattled through a naive solution that go me the answer as quick as I could. Couple of gotchas on the way with converting js strings to numbers.
+I decided to use node for today and rattled through a naive solution that got me the answer as quick as I could. Couple of gotchas on the way with converting js strings to numbers.
 
 Then when done I decided to solve with a reduce instead and looked up how to to that, learning two things.
 
