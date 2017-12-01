@@ -12,6 +12,6 @@ Then when done I decided to solve with a reduce instead and looked up how to to 
 * The existance of javascript's unary plus
 * How to use the spread operator
 
-Over the past years of AoC I've noticed that many early puzzles are opportunities for junior devs to learn about modulos, today's was not different!
+Over the past years of AoC I've noticed that many early puzzles are opportunities for junior devs to learn about modulos, today's was not different! I really should have realised I could use a modulo in part 1 instead of my clumsy conditional.
 
 Looking forward to Day 2 now.
