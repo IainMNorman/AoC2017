@@ -1,0 +1,15 @@
+{
+  "name": "imnaoc",
+  "repository": "https://github.com/IainMNorman/AoC2017",
+  "version": "1.0.0",
+  "description": "Advent of Code 2017",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Iain M Norman",
+  "license": "ISC",
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}
