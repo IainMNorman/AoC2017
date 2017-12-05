@@ -57,3 +57,10 @@ typings/
 # dotenv environment variables file
 .env
 
+
+src/day-05/c#/part1/obj/Debug/
+
+src/day-05/c#/part1/obj/Release/
+src/.vscode/
+src/day-05/c#/part1/.vs/
+src/day-05/c#/part1/bin/
