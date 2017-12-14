@@ -201,10 +201,6 @@ function GetFirewallPosition(tick, size) {
   return pos;
 }
 
-// for (let i = 0; i < 16; i++) {
-//   console.log(GetFirewallPosition(i, 5));
-// }
-
 var severity = 0;
 
 for (let i = 0; i < input.length; i++) {

@@ -17,9 +17,35 @@ function total(input) {
   return total;
 }
 
+function doItAgain(data) {
+  var total = 0;
+  data = data.split("");
+  var increment = data.length / 2;
+
+  for (var i = 0; i < data.length; i++) {
+      var currentDigit = parseInt(data[i]);
+      var nextDigit = parseInt(data[i+increment]);
+
+      if (currentDigit === nextDigit) {
+          total += (currentDigit + nextDigit);
+      }
+  }
+
+  return total;
+}
+
 console.log(total(test1));
 console.log(total(test2));
 console.log(total(test3));
 console.log(total(test4));
 console.log(total(test5));
 console.log(total(puzzleInput));
+
+console.log("----");
+
+console.log(doItAgain(test1));
+console.log(doItAgain(test2));
+console.log(doItAgain(test3));
+console.log(doItAgain(test4));
+console.log(doItAgain(test5));
+console.log(doItAgain(puzzleInput));
