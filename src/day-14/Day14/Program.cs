@@ -11,21 +11,21 @@ namespace Day14
     {
         static void Main(string[] args)
         {
-            Part1("flqrgnkx");
-            Part2("flqrgnkx");
-            //Part1("nbysizxe");            
-            //Part2("nbysizxe");
-            Console.ReadLine();
+            //Part1("flqrgnkx");
+            //Part2("flqrgnkx");
+            Part1("nbysizxe");            
+            Part2("nbysizxe");
+            //Console.ReadLine();
         }
 
         static void Part2(string input)
         {
 
-            var rows = new List<BitArray>();
+            var rows = new List<bool[]>();
 
             for (int i = 0; i < 128; i++)
             {
-                var bits = new BitArray(GetHash(input + "-" + i));
+                var bits = GetBoolArray(input + "-" + i);
                 rows.Add(bits);
             }
 
@@ -112,11 +112,11 @@ namespace Day14
         static void Part1(string input)
         {
 
-            var rows = new List<BitArray>();
+            var rows = new List<bool[]>();
 
             for (int i = 0; i < 128; i++)
             {
-                var bits = new BitArray(GetHash(input + "-" + i));
+                var bits = GetBoolArray(input + "-" + i);
                 rows.Add(bits);
             }
 
@@ -128,20 +128,20 @@ namespace Day14
                     if (bit)
                     {
                         used++;
-                        Console.Write("#");
+                        //Console.Write("#");
                     }
                     else
                     {
-                        Console.Write(".");
+                        //Console.Write(".");
                     }
                 }
-                Console.Write(Environment.NewLine);
+                //Console.Write(Environment.NewLine);
             }
 
             Console.WriteLine(used);
         }
 
-        static bool[] GetBits(string hashin)
+        static bool[] GetBoolArray(string hashin)
         {
             var currentIndex = 0;
             var skip = 0;
@@ -214,13 +214,16 @@ namespace Day14
                     array[i + 14] ^
                     array[i + 15]));
             }
-            StringBuilder sb = new StringBuilder();
-            foreach (byte b in dense)
-                sb.Append(b.ToString("X2"));
+            var boolArray = new bool[128];
+            for (int i = 0; i < dense.Count; i++)
+            {
+                BitArray b = new BitArray(new byte[] { dense[i] });
+                bool[] bits = new bool[b.Count];
+                b.CopyTo(bits, 0);
+                bits.Reverse().ToArray().CopyTo(boolArray, i * 8);
+            }
 
-            string hexString = sb.ToString();
-
-            
+            return boolArray;
         }
 
     }
